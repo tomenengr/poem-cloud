@@ -1,0 +1,68 @@
+[
+  {
+    "from": "libai",
+    "to": "dufu",
+    "type": "提及",
+    "note": "杜甫多首诗追忆李白"
+  },
+  {
+    "from": "dufu",
+    "to": "libai",
+    "type": "赠诗",
+    "note": "《梦李白二首》"
+  },
+  {
+    "from": "sushi",
+    "to": "liqingzhao",
+    "type": "提及",
+    "note": "李清照评苏词"
+  },
+  {
+    "from": "xinqiji",
+    "to": "sushi",
+    "type": "提及",
+    "note": "辛弃疾继承苏轼豪放"
+  },
+  {
+    "from": "luyou",
+    "to": "xinqiji",
+    "type": "提及",
+    "note": "同为南宋爱国词人"
+  },
+  {
+    "from": "libai",
+    "to": "wangwei",
+    "type": "提及",
+    "note": "盛唐山水诗友"
+  },
+  {
+    "from": "dufu",
+    "to": "sushi",
+    "type": "提及",
+    "note": "杜甫诗风影响后世"
+  },
+  {
+    "from": "sushi",
+    "to": "xinqiji",
+    "type": "提及",
+    "note": "苏辛并称豪放派"
+  },
+  {
+    "from": "liqingzhao",
+    "to": "luyou",
+    "type": "提及",
+    "note": "宋词婉约与豪放"
+  },
+  {
+    "from": "lishangyin",
+    "to": "dufu",
+    "type": "提及",
+    "note": "晚唐义山承杜"
+  },
+  {
+    "from": "baijuyi",
+    "to": "sushi",
+    "type": "提及",
+    "note": "白居易平易影响东坡"
+  }
+]

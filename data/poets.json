@@ -1,0 +1,263 @@
+[
+  {
+    "id": "libai",
+    "name": "李白",
+    "dynasty": "唐",
+    "bio": "唐代浪漫主义诗人，字太白，号青莲居士。诗风豪放飘逸，想象丰富，被誉为“诗仙”。",
+    "worksCount": 68,
+    "birthYear": 701,
+    "deathYear": 762
+  },
+  {
+    "id": "dufu",
+    "name": "杜甫",
+    "dynasty": "唐",
+    "bio": "唐代现实主义诗人，被后世称为“诗圣”。其诗深刻反映社会现实，沉郁顿挫，格律严谨。",
+    "worksCount": 56,
+    "birthYear": 712,
+    "deathYear": 770
+  },
+  {
+    "id": "wangwei",
+    "name": "王维",
+    "dynasty": "唐",
+    "bio": "唐代诗人、画家、音乐家。诗画合一，风格清新淡雅，尤擅山水田园诗。",
+    "worksCount": 44,
+    "birthYear": 699,
+    "deathYear": 759
+  },
+  {
+    "id": "lishangyin",
+    "name": "李商隐",
+    "dynasty": "唐",
+    "bio": "晚唐著名诗人，擅长七律。诗作情思深婉，富于象征，代表作《锦瑟》《无题》。",
+    "worksCount": 44,
+    "birthYear": 813,
+    "deathYear": 858
+  },
+  {
+    "id": "baijuyi",
+    "name": "白居易",
+    "dynasty": "唐",
+    "bio": "唐代诗人，字乐天，号香山居士。倡导新乐府运动，诗风平易近人。",
+    "worksCount": 44,
+    "birthYear": 772,
+    "deathYear": 846
+  },
+  {
+    "id": "sushi",
+    "name": "苏轼",
+    "dynasty": "宋",
+    "bio": "北宋文学家、书法家、美食家。豪放词派代表，与父苏洵、弟苏辙并称“三苏”。",
+    "worksCount": 44,
+    "birthYear": 1037,
+    "deathYear": 1101
+  },
+  {
+    "id": "liqingzhao",
+    "name": "李清照",
+    "dynasty": "宋",
+    "bio": "宋代女词人，婉约派代表。词风清丽婉转，善用白描。",
+    "worksCount": 44,
+    "birthYear": 1084,
+    "deathYear": 1155
+  },
+  {
+    "id": "xinqiji",
+    "name": "辛弃疾",
+    "dynasty": "宋",
+    "bio": "南宋豪放派词人，字幼安，号稼轩。词作气势雄浑，爱国情怀强烈。",
+    "worksCount": 44,
+    "birthYear": 1140,
+    "deathYear": 1207
+  },
+  {
+    "id": "luyou",
+    "name": "陆游",
+    "dynasty": "宋",
+    "bio": "南宋爱国诗人，字务观，号放翁。一生创作诗歌近万首，风格雄浑豪放。",
+    "worksCount": 44,
+    "birthYear": 1125,
+    "deathYear": 1210
+  },
+  {
+    "id": "menghaoran",
+    "name": "孟浩然",
+    "dynasty": "唐",
+    "bio": "唐代山水田园诗派代表，与王维并称“王孟”。",
+    "worksCount": 32,
+    "birthYear": 689,
+    "deathYear": 740
+  },
+  {
+    "id": "dum u",
+    "name": "杜牧",
+    "dynasty": "唐",
+    "bio": "晚唐著名诗人、散文家，字牧之。诗风俊爽清丽。",
+    "worksCount": 20,
+    "birthYear": 803,
+    "deathYear": 852
+  },
+  {
+    "id": "liyu",
+    "name": "李煜",
+    "dynasty": "其他",
+    "bio": "南唐后主，词人。亡国后词风由华丽变为凄凉深沉。",
+    "worksCount": 32,
+    "birthYear": 937,
+    "deathYear": 978
+  },
+  {
+    "id": "naran",
+    "name": "纳兰性德",
+    "dynasty": "清",
+    "bio": "清代词人，原名纳兰成德，字容若。词风清丽淡雅，多写相思。",
+    "worksCount": 32,
+    "birthYear": 1655,
+    "deathYear": 1685
+  },
+  {
+    "id": "taoyuanming",
+    "name": "陶渊明",
+    "dynasty": "其他",
+    "bio": "东晋末至南朝宋初伟大诗人、辞赋家、散文家。田园诗鼻祖。",
+    "worksCount": 20,
+    "birthYear": 365,
+    "deathYear": 427
+  },
+  {
+    "id": "quyuan",
+    "name": "屈原",
+    "dynasty": "其他",
+    "bio": "战国楚国诗人、政治家。楚辞的创立者和代表作家。",
+    "worksCount": 20,
+    "birthYear": -340,
+    "deathYear": -278
+  },
+  {
+    "id": "han yu",
+    "name": "韩愈",
+    "dynasty": "唐",
+    "bio": "唐代文学家、思想家、哲学家。唐宋八大家之首。",
+    "worksCount": 20,
+    "birthYear": 768,
+    "deathYear": 824
+  },
+  {
+    "id": "liu yuxi",
+    "name": "刘禹锡",
+    "dynasty": "唐",
+    "bio": "唐代文学家、哲学家。诗文兼擅，有“诗豪”之称。",
+    "worksCount": 20,
+    "birthYear": 772,
+    "deathYear": 842
+  },
+  {
+    "id": "zhangji",
+    "name": "张籍",
+    "dynasty": "唐",
+    "bio": "唐代诗人。乐府诗成就突出，与王建并称“张王”。",
+    "worksCount": 20,
+    "birthYear": 766,
+    "deathYear": 830
+  },
+  {
+    "id": "yuan zhen",
+    "name": "元稹",
+    "dynasty": "唐",
+    "bio": "唐代诗人。元和体代表，与白居易齐名。",
+    "worksCount": 20,
+    "birthYear": 779,
+    "deathYear": 831
+  },
+  {
+    "id": "wen tingyun",
+    "name": "温庭筠",
+    "dynasty": "唐",
+    "bio": "唐代诗人、词人。花间词派鼻祖。",
+    "worksCount": 20,
+    "birthYear": 812,
+    "deathYear": 870
+  },
+  {
+    "id": "ouyangxiu",
+    "name": "欧阳修",
+    "dynasty": "宋",
+    "bio": "北宋政治家、文学家、史学家。唐宋八大家之一。",
+    "worksCount": 32,
+    "birthYear": 1007,
+    "deathYear": 1072
+  },
+  {
+    "id": "wanganshi",
+    "name": "王安石",
+    "dynasty": "宋",
+    "bio": "北宋政治家、文学家、思想家。唐宋八大家之一。",
+    "worksCount": 20,
+    "birthYear": 1021,
+    "deathYear": 1086
+  },
+  {
+    "id": "sushi2",
+    "name": "苏辙",
+    "dynasty": "宋",
+    "bio": "北宋文学家、诗人。唐宋八大家之一，与父兄并称“三苏”。",
+    "worksCount": 20,
+    "birthYear": 1039,
+    "deathYear": 1112
+  },
+  {
+    "id": "huangtingjian",
+    "name": "黄庭坚",
+    "dynasty": "宋",
+    "bio": "北宋著名文学家、书法家。江西诗派开山之祖。",
+    "worksCount": 20,
+    "birthYear": 1045,
+    "deathYear": 1105
+  },
+  {
+    "id": "qinguan",
+    "name": "秦观",
+    "dynasty": "宋",
+    "bio": "北宋词人。婉约派代表，与黄庭坚、晁补之、张耒并称“苏门四学士”。",
+    "worksCount": 20,
+    "birthYear": 1049,
+    "deathYear": 1100
+  },
+  {
+    "id": "zhou bangyan",
+    "name": "周邦彦",
+    "dynasty": "宋",
+    "bio": "北宋末南宋初著名词人。格律派词的创始人。",
+    "worksCount": 20,
+    "birthYear": 1056,
+    "deathYear": 1121
+  },
+  {
+    "id": "yanshu",
+    "name": "晏殊",
+    "dynasty": "宋",
+    "bio": "北宋著名词人。婉约派代表，作品多抒写闲情逸致。",
+    "worksCount": 20,
+    "birthYear": 991,
+    "deathYear": 1055
+  },
+  {
+    "id": "liuyong",
+    "name": "柳永",
+    "dynasty": "宋",
+    "bio": "北宋著名词人。大量创制长调慢词，善写羁旅行役。",
+    "worksCount": 32,
+    "birthYear": 987,
+    "deathYear": 1053
+  },
+  {
+    "id": "fan zhongyan",
+    "name": "范仲淹",
+    "dynasty": "宋",
+    "bio": "北宋政治家、文学家。名篇《岳阳楼记》。",
+    "worksCount": 20,
+    "birthYear": 989,
+    "deathYear": 1052
+  }
+]
