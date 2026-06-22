@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  poem-cloud:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: poem-cloud-app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    # If you have an external Nginx handling port 80/443, just map 3000.
+    # To run directly on port 80 without Nginx, change ports to "80:3000"
