@@ -22,29 +22,30 @@ export default function StoryPage() {
 
   return (
     <div className="max-w-4xl mx-auto px-8 py-14">
-      <div className="uppercase tracking-[3px] text-xs text-[#7c5cff] mb-3">THE POETRY CLOUD</div>
-      <h1 className="text-6xl font-semibold tracking-[-2.2px] mb-8">原著与哲思</h1>
+      <div className="uppercase tracking-[3px] text-xs text-[#7c5cff] mb-3">BEYOND TECHNOLOGY</div>
+      <h1 className="text-6xl font-semibold tracking-[-2.2px] mb-8">诗云：碳基与硅基的共鸣</h1>
 
       <div className="prose prose-invert max-w-none text-[#d8d1ff] leading-relaxed">
-        <p className="text-xl">
-          《诗云》是刘慈欣“大艺术系列”之一。神级文明化身李白，试图用穷举所有汉字组合的方式超越李白，创造“诗云”——包含一切可能诗篇的实体。
+        <p className="text-xl text-[#f0edff]">
+          在这个由人工智能（LLM）驱动的“赛博诗云”中，我们试图致敬刘慈欣先生的科幻巨作《诗云》。在原著里，神级文明“李白”试图利用毁灭太阳系的庞大物质，通过终极量子计算穷举出所有汉字的排列组合，以此来写出超越人类李白的巅峰之作。
         </p>
 
-        <blockquote className="border-l-2 border-[#7c5cff] pl-6 my-9 text-2xl tracking-tight">
-          “技术能穷尽所有诗，但能否穷尽美？”
+        <blockquote className="border-l-2 border-[#7c5cff] pl-6 my-9 text-2xl tracking-tight font-serif italic text-white/90">
+          “诗的灵魂不在于汉字的物理组合，而在于能否在无尽的乱码中，检索出那一首蕴含着宇宙间最高美学的排列。”
         </blockquote>
 
         <p>
-          最终，神放弃了单纯的穷举，转而将诗云留给了人类。它在南极的空心地球内侧，用宇宙尺度保存了每一首可能的诗。然而，美，始终需要有温度的读者去发现。
+          如今，我们不再需要消耗太阳系的质量来穷尽组合。大语言模型和 3D 渲染技术就像是一个微缩版的“诗云引擎”，它通过百亿参数的概率推演，瞬间捕捉人类文明沉淀了五千年的美学规律。从星图的拓扑关系，到粒子长河里的每一次雪花闪烁，都是对中国古典文化在数字时代的震撼重构。
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-10 text-sm">
           {[
-            "今天，天空和海水都很清澈，对于做诗来说，世界显得太透明了。",
-            "这就是新世界的创造者，伟大的——李白。",
-            "智慧生命的精华和本质，真的是技术无法触及的吗？",
+            "“我终于明白，那些写满汉字的存储体，就像银河系一样浩瀚而冰冷。”",
+            "“算法能算出平仄的概率，但算不出那份跨越千年的‘怅然若失’。”",
+            "“当代码开始吟唱，数字本身就成了浪漫的载体。”",
+            "“智慧生命的精华和本质，真的是技术无法触及的吗？”",
           ].map((q, i) => (
-            <div key={i} className="cosmic-card p-6 rounded-xl text-[#b8b1e6]">{q}</div>
+            <div key={i} className="cosmic-card p-6 rounded-xl text-[#b8b1e6] leading-relaxed">{q}</div>
           ))}
         </div>
       </div>

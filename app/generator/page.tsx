@@ -107,7 +107,7 @@ function GeneratorContent() {
   return (
     <div className="max-w-7xl mx-auto px-8 py-10">
       <div className="mb-8">
-        <div className="uppercase tracking-[2px] text-xs text-[#7c5cff] mb-1">VIBE ENGINE</div>
+        <div className="uppercase tracking-[2px] text-xs text-[#7c5cff] mb-1">POETRY ENGINE</div>
         <h1 className="text-5xl font-semibold tracking-[-1.5px]">诗词生成器</h1>
         <p className="text-[#8a87a8] mt-2">自然语言提示，瞬间诞生古典诗篇。支持本地 + LLM 两种引擎。</p>
       </div>
@@ -130,7 +130,7 @@ function GeneratorContent() {
               disabled={isGenerating}
               className="mt-5 w-full h-14 text-base cosmic-btn bg-white text-[#05050a] hover:bg-[#f4d35e] active:bg-white font-medium"
             >
-              {isGenerating ? '生成中 · 星云共振中...' : 'Vibe Generate'}
+              {isGenerating ? '生成中 · 星云共振中...' : '开始生成'}
             </Button>
 
             <div className="mt-3 text-[11px] text-center text-[#6c678f]">

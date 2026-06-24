@@ -3,6 +3,8 @@
 import React, { useMemo, useState, useRef } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, Html, Stars } from '@react-three/drei';
+import { EffectComposer, Bloom, Vignette, ChromaticAberration } from '@react-three/postprocessing';
+import { BlendFunction } from 'postprocessing';
 import * as THREE from 'three';
 import poetsData from '@/data/poets.json';
 import poemsData from '@/data/poems.json';
@@ -26,15 +28,17 @@ const DYNASTY_COLORS: Record<Dynasty, string> = {
   '其他': '#c4b5fd',
 };
 
-function getPosition(id: string, idx: number): [number, number, number] {
-  // Deterministic spherical placement + slight dynasty clusters
+function getPosition(id: string, idx: number, total: number): [number, number, number] {
+  // Fibonacci sphere distribution for perfectly even spacing
+  const phi = Math.acos(1 - 2 * (idx + 0.5) / total);
+  const theta = Math.PI * (1 + Math.sqrt(5)) * idx;
+
   const hash = id.split('').reduce((a, c) => a + c.charCodeAt(0), 0);
-  const phi = ((hash % 360) * Math.PI) / 180;
-  const theta = Math.acos((2 * ((idx % 17) / 17)) - 1);
-  const r = 22 + (hash % 7);
-  const x = r * Math.sin(theta) * Math.cos(phi);
-  const y = r * Math.cos(theta) * 0.65;
-  const z = r * Math.sin(theta) * Math.sin(phi);
+  const r = 38 + (hash % 12); // expanded base radius from 22 to 38
+
+  const x = r * Math.sin(phi) * Math.cos(theta);
+  const y = r * Math.sin(phi) * Math.sin(theta) * 0.85; // slightly squashed y for a galaxy feel
+  const z = r * Math.cos(phi);
   return [x, y, z];
 }
 
@@ -60,18 +64,23 @@ function PoetNode({ poet, position, isSelected, onClick, visible }: PoetNodeProp
     const t = state.clock.elapsedTime;
     const pulse = 1 + Math.sin(t * 1.6 + poet.worksCount) * 0.045;
 
-    // 核心轻微脉动 + 上下浮动
-    const yBob = Math.sin(t * 0.7 + (poet.worksCount % 5)) * 0.15;
+    // 核心轻微脉动
+    const yBob = Math.sin(t * 0.5 + (poet.worksCount % 5)) * 0.2;
     meshRef.current.position.set(position[0], position[1] + yBob, position[2]);
-    meshRef.current.scale.setScalar(pulse);
+    
+    // Pulse the core intensely
+    meshRef.current.scale.setScalar(pulse * (isSelected ? 1.5 : 1));
 
     if (glowRef.current) {
-      glowRef.current.position.set(position[0], position[1] + yBob * 0.9, position[2]);
-      glowRef.current.scale.setScalar(pulse * 1.65);
+      glowRef.current.position.set(position[0], position[1] + yBob, position[2]);
+      glowRef.current.scale.setScalar(pulse * 1.8 * (isSelected ? 1.5 : 1));
+      // Rotate glow slightly
+      glowRef.current.rotation.y = t * 0.2;
     }
     if (outerRef.current) {
-      outerRef.current.position.set(position[0], position[1] + yBob * 0.6, position[2]);
-      outerRef.current.scale.setScalar(2.35 + Math.sin(t * 0.9) * 0.08);
+      outerRef.current.position.set(position[0], position[1] + yBob, position[2]);
+      outerRef.current.scale.setScalar(2.5 + Math.sin(t * 1.2) * 0.15);
+      outerRef.current.rotation.z = t * -0.15;
     }
   });
 
@@ -81,44 +90,41 @@ function PoetNode({ poet, position, isSelected, onClick, visible }: PoetNodeProp
 
   return (
     <group>
-      {/* 外层大气光晕 - 绚烂的关键 */}
+      {/* 外层大气光晕 - Additive blending for true glow */}
       <mesh
         ref={outerRef}
         position={position}
         onClick={(e) => { e.stopPropagation(); onClick(); }}
-        onPointerOver={(e) => { document.body.style.cursor = 'pointer'; }}
+        onPointerOver={() => { document.body.style.cursor = 'pointer'; }}
         onPointerOut={() => { document.body.style.cursor = 'default'; }}
       >
-        <sphereGeometry args={[baseSize * 1.05]} />
-        <meshBasicMaterial color={color} transparent opacity={0.09} />
+        <sphereGeometry args={[baseSize * 1.2, 32, 32]} />
+        <meshBasicMaterial color={color} transparent opacity={isSelected ? 0.3 : 0.1} blending={THREE.AdditiveBlending} depthWrite={false} />
       </mesh>
 
-      {/* 中层柔和发光球 */}
+      {/* 中层高亮柔和发光球 */}
       <mesh ref={glowRef} position={position}>
-        <sphereGeometry args={[baseSize * 1.35]} />
-        <meshBasicMaterial color={color} transparent opacity={0.16} />
+        <sphereGeometry args={[baseSize * 0.8, 32, 32]} />
+        <meshBasicMaterial color={color} transparent opacity={isSelected ? 0.6 : 0.25} blending={THREE.AdditiveBlending} depthWrite={false} />
       </mesh>
 
-      {/* 核心实体星体（更亮） */}
+      {/* 核心实体星体（纯白核心 + Bloom） */}
       <mesh
         ref={meshRef}
         position={position}
-        onClick={(e) => { e.stopPropagation(); onClick(); }}
-        onPointerOver={(e) => { document.body.style.cursor = 'pointer'; }}
-        onPointerOut={() => { document.body.style.cursor = 'default'; }}
       >
-        <sphereGeometry args={[baseSize]} />
-        <meshBasicMaterial color={color} transparent opacity={isSelected ? 1 : 0.92} />
+        <sphereGeometry args={[baseSize * 0.35, 16, 16]} />
+        <meshBasicMaterial color="#ffffff" transparent opacity={isSelected ? 1 : 0.8} />
       </mesh>
 
-      {/* 明亮内环（星座感） */}
-      <mesh position={[position[0], position[1], position[2]]} rotation={[0.6, 1.1, 0]}>
-        <ringGeometry args={[baseSize * 1.55, baseSize * 1.72, 48]} />
-        <meshBasicMaterial color="#fff" transparent opacity={isSelected ? 0.65 : 0.28} side={THREE.DoubleSide} />
+      {/* 动态星轨内环 */}
+      <mesh position={position} rotation={[Math.PI / 3, Math.PI / 4, 0]}>
+        <ringGeometry args={[baseSize * 1.6, baseSize * 1.65, 64]} />
+        <meshBasicMaterial color={color} transparent opacity={isSelected ? 0.8 : 0.3} side={THREE.DoubleSide} blending={THREE.AdditiveBlending} depthWrite={false} />
       </mesh>
 
       {/* 名字标签 */}
-      <Html position={[position[0], position[1] + baseSize * 1.9, position[2]]} style={{ pointerEvents: 'none' }}>
+      <Html position={[position[0], position[1] + baseSize * 2.5, position[2]]} center style={{ pointerEvents: 'none' }} zIndexRange={[0, 0]}>
         <div 
           className={`star-label px-3 py-px rounded-md transition-all ${isSelected ? 'text-white bg-[#7c5cff]/80 scale-110' : 'text-[#e0d4ff]/95'}`}
           style={{ 
@@ -142,8 +148,8 @@ interface RelationLineProps {
 function RelationLine({ fromPos, toPos, visible }: RelationLineProps) {
   const points = useMemo(() => {
     const mid: [number, number, number] = [
-      (fromPos[0] + toPos[0]) / 2 + (fromPos[1] - toPos[1]) * 0.22,
-      (fromPos[1] + toPos[1]) / 2 + 3.8,
+      (fromPos[0] + toPos[0]) / 2,
+      (fromPos[1] + toPos[1]) / 2 + 5.0, // Majestic arch
       (fromPos[2] + toPos[2]) / 2,
     ];
     return [
@@ -154,20 +160,20 @@ function RelationLine({ fromPos, toPos, visible }: RelationLineProps) {
   }, [fromPos, toPos]);
 
   const curve = useMemo(() => new THREE.CatmullRomCurve3(points), [points]);
-  const tube = useMemo(() => new THREE.TubeGeometry(curve, 42, 0.028, 7, false), [curve]);
-  const glowTube = useMemo(() => new THREE.TubeGeometry(curve, 42, 0.085, 7, false), [curve]);
+  const tube = useMemo(() => new THREE.TubeGeometry(curve, 64, 0.015, 8, false), [curve]);
+  const glowTube = useMemo(() => new THREE.TubeGeometry(curve, 64, 0.08, 8, false), [curve]);
 
   if (!visible) return null;
 
   return (
     <group>
-      {/* 外层柔光 */}
+      {/* 外层绚烂柔光能量带 */}
       <mesh geometry={glowTube}>
-        <meshBasicMaterial color="#6b5ce7" transparent opacity={0.12} />
+        <meshBasicMaterial color="#a78bfa" transparent opacity={0.15} blending={THREE.AdditiveBlending} depthWrite={false} />
       </mesh>
-      {/* 明亮核心线 - 星座感 */}
+      {/* 核心高亮光束 */}
       <mesh geometry={tube}>
-        <meshBasicMaterial color="#c8bfff" transparent opacity={0.65} />
+        <meshBasicMaterial color="#ffffff" transparent opacity={0.5} blending={THREE.AdditiveBlending} depthWrite={false} />
       </mesh>
     </group>
   );
@@ -185,7 +191,7 @@ function Scene({ visiblePoets, selectedId, onSelect, searchTerm, showPoemRelatio
   const { camera } = useThree();
   const poetPositions = useMemo(() => {
     const map = new Map<string, [number, number, number]>();
-    visiblePoets.forEach((p, i) => map.set(p.id, getPosition(p.id, i)));
+    visiblePoets.forEach((p, i) => map.set(p.id, getPosition(p.id, i, visiblePoets.length)));
     return map;
   }, [visiblePoets]);
 
@@ -233,13 +239,23 @@ function Scene({ visiblePoets, selectedId, onSelect, searchTerm, showPoemRelatio
         return <RelationLine key={idx} fromPos={a} toPos={b} visible />;
       })}
 
+      {/* Cinematic Post Processing for StarMap */}
+      <EffectComposer disableNormalPass>
+        <Bloom luminanceThreshold={0.2} luminanceSmoothing={0.9} intensity={2.0} mipmapBlur />
+        {/* @ts-ignore */}
+        <ChromaticAberration offset={new THREE.Vector2(0.0008, 0.0008)} blendFunction={BlendFunction.NORMAL} />
+        <Vignette eskil={false} offset={0.1} darkness={0.9} blendFunction={BlendFunction.NORMAL} />
+      </EffectComposer>
+
       <OrbitControls
         enablePan={true}
         enableZoom={true}
         enableDamping
-        dampingFactor={0.12}
+        dampingFactor={0.08}
+        autoRotate={!selectedId} // Auto rotate when not zoomed in on someone
+        autoRotateSpeed={0.8}
         minDistance={8}
-        maxDistance={90}
+        maxDistance={120}
       />
     </>
   );
@@ -399,7 +415,9 @@ export default function StarMap({ externalSearch = '', externalDynastyFilter = n
 
       {/* Detail Modal - 绚烂升级版 */}
       <Dialog open={showModal} onOpenChange={setShowModal}>
-        <DialogContent className="dialog-content max-w-3xl text-[#f0edff] p-0 overflow-hidden">
+        <DialogContent showCloseButton={false} className="dialog-content w-[90vw] max-w-[90vw] sm:max-w-3xl max-h-[85vh] text-[#f0edff] bg-[#0c0c18] border border-white/10 p-0 overflow-y-auto custom-poem-scroll">
+          <DialogTitle className="sr-only">诗人详情</DialogTitle>
+          <DialogDescription className="sr-only">诗人生平与传世名篇</DialogDescription>
           {selectedPoet && (
             <>
               {/* 头部 - 绚烂诗人头像占位 + 大名 */}

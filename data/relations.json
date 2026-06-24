@@ -64,5 +64,485 @@
     "to": "sushi",
     "type": "提及",
     "note": "白居易平易影响东坡"
+  },
+  {
+    "from": "menghaoran",
+    "to": "weiluyin",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "menghaoran",
+    "to": "meng jiao",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "dum u",
+    "to": "gaoshi",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "dum u",
+    "to": "jia dao",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "liyu",
+    "to": "taoyuanming",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "liyu",
+    "to": "caozhi",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "naran",
+    "to": "huangzongxi",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "naran",
+    "to": "wangfuzhi",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "quyuan",
+    "to": "caocao",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "quyuan",
+    "to": "taoyuanming",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "han yu",
+    "to": "gaoshi",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "han yu",
+    "to": "luzhaolin",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "liu yuxi",
+    "to": "gaoshi",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "liu yuxi",
+    "to": "yuan zhen",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "zhangji",
+    "to": "hezhizhang",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "zhangji",
+    "to": "luzhaolin",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "wen tingyun",
+    "to": "libai",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "wen tingyun",
+    "to": "dum u",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "ouyangxiu",
+    "to": "zhou bangyan",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "ouyangxiu",
+    "to": "fan chengda",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "wanganshi",
+    "to": "yanshu",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "wanganshi",
+    "to": "luyou",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "sushi2",
+    "to": "qinguan",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "sushi2",
+    "to": "wen tianxiang",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "huangtingjian",
+    "to": "liqingzhao",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "huangtingjian",
+    "to": "liuyong",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "fan zhongyan",
+    "to": "jiang kui",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "fan zhongyan",
+    "to": "xinqiji",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "caopi",
+    "to": "quyuan",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "caopi",
+    "to": "caocao",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "wangbo",
+    "to": "han yu",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "wangbo",
+    "to": "chenziang",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "luobinwang",
+    "to": "dum u",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "luobinwang",
+    "to": "chenziang",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "yangjiong",
+    "to": "zhangjiuling",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "yangjiong",
+    "to": "weiluyin",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "wangchangling",
+    "to": "wen tingyun",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "wangchangling",
+    "to": "weiluyin",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "wangzhihuan",
+    "to": "zhangjiuling",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "wangzhihuan",
+    "to": "lihe",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "cen shen",
+    "to": "wangbo",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "cen shen",
+    "to": "liuzongyuan",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "pi rixiu",
+    "to": "lihe",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "pi rixiu",
+    "to": "dum u",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "luguimeng",
+    "to": "dufu",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "luguimeng",
+    "to": "jia dao",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "suxun",
+    "to": "xinqiji",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "suxun",
+    "to": "sushi",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "zeng gong",
+    "to": "luyou",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "zeng gong",
+    "to": "sushi2",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "lu benzhong",
+    "to": "luyou",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "lu benzhong",
+    "to": "suxun",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "yang wanli",
+    "to": "liuyong",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "yang wanli",
+    "to": "jiang kui",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "you mao",
+    "to": "wanganshi",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "you mao",
+    "to": "zeng gong",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "wu wenying",
+    "to": "sushi2",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "wu wenying",
+    "to": "xinqiji",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "yuanhaowen",
+    "to": "guan hanqing",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "yuanhaowen",
+    "to": "ma zhiyuan",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "bai pu",
+    "to": "ma zhiyuan",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "bai pu",
+    "to": "yuanhaowen",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "zheng guangzu",
+    "to": "guan hanqing",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "zheng guangzu",
+    "to": "yuanhaowen",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "gao qi",
+    "to": "wang shizhen",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "gao qi",
+    "to": "wen zhengming",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "tang yin",
+    "to": "wang shizhen",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "tang yin",
+    "to": "zhu zhishan",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "xu zhenqing",
+    "to": "gao qi",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "xu zhenqing",
+    "to": "tang yin",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "yuan hongdao",
+    "to": "wang shizhen",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "yuan hongdao",
+    "to": "wen zhengming",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "zhang dai",
+    "to": "wen zhengming",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "zhang dai",
+    "to": "wang shizhen",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "guyanwu",
+    "to": "wangfuzhi",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "guyanwu",
+    "to": "zheng banqiao",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "yuan mei",
+    "to": "zheng banqiao",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "yuan mei",
+    "to": "huangzongxi",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "gong zizhen",
+    "to": "huangzongxi",
+    "type": "齐名",
+    "note": "同时期诗人交往"
+  },
+  {
+    "from": "gong zizhen",
+    "to": "qiu jin",
+    "type": "齐名",
+    "note": "同时期诗人交往"
   }
 ]
