@@ -19,6 +19,11 @@ const poets = poetsData as Poet[];
 const poems = poemsData as Poem[];
 const relations = relationsData as Relation[];
 
+const SafeEffectComposer = EffectComposer as any;
+const SafeBloom = Bloom as any;
+const SafeChromaticAberration = ChromaticAberration as any;
+const SafeVignette = Vignette as any;
+
 const DYNASTY_COLORS: Record<Dynasty, string> = {
   '唐': '#f4c95d',   // 温暖金橙（唐诗盛世）
   '宋': '#a78bfa',   // 冷艳紫蓝（宋词婉约）
@@ -240,12 +245,11 @@ function Scene({ visiblePoets, selectedId, onSelect, searchTerm, showPoemRelatio
       })}
 
       {/* Cinematic Post Processing for StarMap */}
-      <EffectComposer disableNormalPass>
-        <Bloom luminanceThreshold={0.2} luminanceSmoothing={0.9} intensity={2.0} mipmapBlur />
-        {/* @ts-ignore */}
-        <ChromaticAberration offset={new THREE.Vector2(0.0008, 0.0008)} blendFunction={BlendFunction.NORMAL} />
-        <Vignette eskil={false} offset={0.1} darkness={0.9} blendFunction={BlendFunction.NORMAL} />
-      </EffectComposer>
+      <SafeEffectComposer disableNormalPass>
+        <SafeBloom luminanceThreshold={0.2} luminanceSmoothing={0.9} intensity={2.0} mipmapBlur />
+        <SafeChromaticAberration offset={new THREE.Vector2(0.0008, 0.0008)} blendFunction={BlendFunction.NORMAL} />
+        <SafeVignette eskil={false} offset={0.1} darkness={0.9} blendFunction={BlendFunction.NORMAL} />
+      </SafeEffectComposer>
 
       <OrbitControls
         enablePan={true}

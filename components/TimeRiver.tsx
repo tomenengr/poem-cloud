@@ -311,8 +311,8 @@ function RiverParticles() {
   return (
     <points frustumCulled={false}>
       <bufferGeometry ref={geomRef}>
-        <bufferAttribute attach="attributes-position" count={count} array={positions} itemSize={3} />
-        <bufferAttribute attach="attributes-color" count={count} array={colors} itemSize={3} />
+        <bufferAttribute attach="attributes-position" args={[positions, 3]} />
+        <bufferAttribute attach="attributes-color" args={[colors, 3]} />
       </bufferGeometry>
       <pointsMaterial 
         map={circleTexture} 
@@ -379,7 +379,7 @@ function SnowParticles() {
   return (
     <points frustumCulled={false}>
       <bufferGeometry ref={geomRef}>
-        <bufferAttribute attach="attributes-position" count={count} array={positions} itemSize={3} />
+        <bufferAttribute attach="attributes-position" args={[positions, 3]} />
       </bufferGeometry>
       <pointsMaterial 
         map={snowTex}
